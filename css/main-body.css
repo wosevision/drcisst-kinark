@@ -1,0 +1,378 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700,400|Open+Sans+Condensed:300,700);
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;   
+    color: #3470c6;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #5D8DD1;
+}
+
+h2,
+h3 {
+    font-weight: 300;   
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3.5em;
+    letter-spacing: 0.08em;
+    padding-bottom: 5px;
+    border-bottom: solid 3px #ff3f3f;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #ff3f3f;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+h5 {
+    font-style: italic;
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+
+::selection {
+    background-color: #5D8DD1; 
+}
+
+::-moz-selection {
+    background-color: #5D8DD1; 
+}
+
+iframe {
+    margin-bottom: 20px;   
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    color: #666;
+    margin-bottom: 5px;
+    border: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+ul li:before {
+	content: "•";
+	font-size: 1.4em;
+	margin-left: -20px;
+	margin-right: 10px;
+	color: #ff3f3f;
+}
+
+ol {
+	list-style: none;
+	counter-reset: li-counter;
+}
+
+ol li:before {
+	content: counter(li-counter,decimal);
+	counter-increment: li-counter;
+	font-size: 1.8em;
+	padding-top: 5px;
+	margin-left: -20px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #ff3f3f;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+blockquote {
+	margin-top: 50px;
+	margin-bottom: -30px;
+	position: relative;
+	left: -20px;
+	width: calc(100% + 40px);
+	padding: 30px 20px;
+	display: block;
+	background-color: #ff3f3f;
+	color: #fff;
+	font-size: 1.5em;
+	line-height: 1.6em;
+	font-weight: 300;
+	border-top: solid 20px #fff;
+	border-bottom: solid 20px #fff;
+	border-left: none;
+	text-indent: 20px;
+	text-align: center;
+}
+
+blockquote:after {
+    font-family: "FontAwesome";
+    content:'\f10e';
+    position: absolute;
+    right: 10px;
+    bottom: 70px;
+}
+
+blockquote:before {
+    font-family: "FontAwesome";
+    content:'\f10d';
+    position: absolute;
+    left: -10px;
+    top: 25px;
+}
+
+.quoteName {
+	position: relative;
+	top: -5px;
+	text-align: right;
+	color: #fff;
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+/*
+.col-lg-9 { 
+    margin: 0 10px;
+    width: calc(75% - 20px);
+}
+
+.col-lg-3 {
+    margin: 0 10px;
+    width: calc(25% - 20px);
+}
+
+.col-md-8 {
+    margin: 0 10px;
+    width: calc(66.666667% - 20px);
+}
+
+.col-md-4 {
+    margin: 0 10px;
+    width: calc(33.333334% - 20px);
+}
+*/
+
+.container {
+    margin-top: 220px;
+    margin-bottom: 20px;
+}
+
+.carousel-control {
+    height: 500px;   
+}
+
+.carousel-indicators {
+    bottom: 50px;
+}
+
+
+
+.fixpad {
+    padding: 0 10px;
+}
+
+.home-slider {
+    background-color: #ccc;
+    height: 500px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.right-nav {
+    padding: 0;
+}
+
+.right-navbtn {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    display: block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 50px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.main-content a:link,
+.main-content a:visited,
+.right-navbtn:hover {
+    color: #fff; 
+    text-decoration: none;
+}
+
+.donatebtn {
+    background-color: #3470c6;
+}
+
+.donatebtn:hover {
+    background-color: #5D8DD1;
+}
+
+.donatebtn::after {
+    content: "\f155"; 
+    position: absolute;
+    z-index: 10;
+    right: 12px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border-left: solid 1px #fff;
+    font-size: 1.4em;
+    font-family: FontAwesome;
+    font-weight: 100;
+    text-align: center;
+}
+
+.contactbtn {
+    background-color: #ff3f3f;   
+}
+
+.contactbtn:hover {
+    background-color: #FC6666;
+}
+
+.contactbtn::after {
+    content: "\f10b"; 
+    position: absolute;
+    z-index: 10;
+    right: 12px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border-left: solid 1px #fff;
+    font-size: 1.7em;
+    font-family: FontAwesome;
+    font-weight: 300;
+    text-align: center;
+}
+
+.right-dyk {
+    background-color: #ccc;  
+    padding: 5px 20px;
+    height: 360px;
+    border-radius: 4px;
+}
+
+.right-dyk h3 {
+    padding-bottom: 5px;
+    border-bottom: solid 3px #3470c6;
+}
+
+.featvids {
+    padding: 0;
+}
+
+.news {
+    background-color: #eee;
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+
+.inside-img {
+	background-color: hotpink;
+    margin-bottom: 20px;
+	height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.inside-img img {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.text-img {
+	margin-top: 50px;
+	margin-bottom: -30px;
+	position: relative;
+	left: -20px;
+	width: calc(100% + 40px);
+	height: 400px;
+	background-color: #ff3f3f;
+	border-top: solid 20px #fff;
+	border-bottom: solid 20px #fff;
+	overflow: hidden;
+}
+
+footer {
+    background-color: #3470c6;
+    margin-top: 20px;
+    padding: 30px;
+    padding-bottom: 60px;
+    color: #fff;
+}
+
+footer h3 {
+    border-bottom: solid 2px #fff; 
+    padding-bottom: 5px;
+}
+
+footer a:link,
+footer a:visited {
+    color: #fff;
+}
+
+footer a:hover {
+       color: rgba(255, 255, 255, 0.8);
+}
+
+.fa {
+    padding: 0 5px;   
+}
+
+/* MOBILE DEVICES */ 
+@media (max-width: 768px) {
+
+    
+}
+
+/* SMALL SCREENS or TABLETS ONLY */
+@media (max-width: 992px) {
+    
+    iframe {
+        height: 300px;   
+    }
+    
+    .home-slider {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .right-dyk{
+        height: auto;
+        padding-bottom: 20px;
+    }
+}
+
+/* SMALL SCREENS or TABLETS ONLY */
+/*
+@media (min-width: 769px ) and (max-width: 992px) {
+    
+	.right-navbtn {
+        margin-top: 20px;   
+    }
+
+}*/

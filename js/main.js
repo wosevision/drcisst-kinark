@@ -1,20 +1,20 @@
-var scrolledPast = false ;
-
-var navExpanded = false;
-
 $(document).ready(function(){
+
+    var scrolledPast = false ;
+
+    var navExpanded = false;
+    
+    $(".topnav-buttons").hide();
     
 	// Cache the window object
 	$window = $(window);
 	
 	$(window).scroll(function() {
 	
-        if ( $(document).scrollTop() > 100 && scrolledPast == false ) {
+        if ( $(document).scrollTop() > 200 && scrolledPast == false ) {
         
             $("#navbar").addClass("navbar-scrolled");
         
-            $(".navbar-elem").addClass("navbar-elem-scrolled");
-        
             $("#logo-bg").velocity({ 
                             opacity: 0 });
                         
@@ -26,23 +26,24 @@ $(document).ready(function(){
                         
             $("#logo-text-top").velocity({ 
                             opacity: 0 });
+                            
+            
+            $(".topnav-buttons").velocity("transition.perspectiveRightIn", { delay: 350 });
         
             $("#logo-whole").velocity(
                             { 
-                            scale: 0.8,
-                            translateY: -5 }, 
+                            scale: 0.75,
+                            translateY: -112 }, 
                             {
-                            duration: 300,
-                            easing: "spring",
-                            delay: 400
+                            duration: 200,
+                            easing: "ease-in-out",
+                            delay: 200
                             });
             scrolledPast = true;
                             
-        } else if ( $(document).scrollTop() < 100 && scrolledPast == true) {
+        } else if ( $(document).scrollTop() < 200 && scrolledPast == true) {
             
             $("#navbar").removeClass("navbar-scrolled");
-            
-            $(".navbar-elem").removeClass("navbar-elem-scrolled");
         
             $("#logo-bg").velocity({ 
                             opacity: 1 });
@@ -55,15 +56,16 @@ $(document).ready(function(){
                         
             $("#logo-text-top").velocity({ 
                             opacity: 1 });
+                            
+            $(".topnav-buttons").velocity("transition.perspectiveDownOut");
         
             $("#logo-whole").velocity(
                             { 
                             scale: 1,
-                            translateY: 5 }, 
+                            translateY: 0 }, 
                             {
-                            duration: 300,
-                            easing: "spring",
-                            delay: 400
+                            duration: 500,
+                            easing: "ease-in-out"
                             });
             
             scrolledPast = false;
@@ -82,7 +84,7 @@ $(document).ready(function(){
                                                 }, {
                                                     /* Velocity's default options */
                                                     duration: 300,
-                                                    easing: "spring"
+                                                    easing: "ease-out"
                                                 });
                                                 
                         $(".navbar-fixed-bottom").stop().velocity({ 
@@ -91,7 +93,7 @@ $(document).ready(function(){
                                                 }, {
                                                     /* Velocity's default options */
                                                     duration: 300,
-                                                    easing: "spring"
+                                                    easing: "ease-out"
                                                 });
                         
                         $("#expandbtn").addClass("navbtn-clk");
@@ -112,7 +114,7 @@ $(document).ready(function(){
                                                 }, {
                                                     /* Velocity's default options */
                                                     duration: 300,
-                                                    easing: "spring"
+                                                    easing: "ease-out"
                                                 });
                                                 
                         $(".navbar-fixed-bottom").stop().velocity({ 
@@ -121,7 +123,7 @@ $(document).ready(function(){
                                                 }, {
                                                     /* Velocity's default options */
                                                     duration: 300,
-                                                    easing: "spring"
+                                                    easing: "ease-out"
                                                 });
                     
 
